@@ -9,7 +9,7 @@ class CommentsController < ApplicationController
     @thing = Thing.find(params[:thing_id]) # UI-specific logic!
 
     run Comment::Create do |op|
-      flash[:notice] = "Created comment for \"#{op.thing.name}\""
+      flash[:notice] = t('comments.success_message', thing: op.thing.name)
 
       return redirect_to thing_path(op.thing)
     end

@@ -21,3 +21,17 @@
 
 en:
   hello: "Hello world"
+  home:
+    welcome_message: Welcome to Gemgem!
+  session:
+    log_in: Please log in now!
+    sign_up_message: Come join us!
+    sign_in_message: Come in!
+    password_change_message: Password changed.
+    hi_user: Hi, %{user}
+  errors:
+    user_not_authorized: Not authorized, my friend.
+  comments:
+    success_message: Created comment for %{thing}
+  things:
+    new: Start discussion!

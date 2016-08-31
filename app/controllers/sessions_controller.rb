@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
 
   def sign_up
     run Session::SignUp do |op|
-      flash[:notice] = "Please log in now!"
+      flash[:notice] = t('session.log_in')
       return redirect_to sessions_sign_in_form_path
     end
 
@@ -46,7 +46,7 @@ class SessionsController < ApplicationController
 
   def wake_up
     run Session::ChangePassword do
-      flash[:notice] = "Password changed."
+      flash[:notice] = t('session.password_change_message')
        redirect_to sessions_sign_in_form_path # TODO: user profile.
        return
     end # TODO: require_original: true

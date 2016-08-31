@@ -1,4 +1,5 @@
-%h1 Come in!
+%h1
+  = t('session.sign_in_message')
 
 = simple_form_for(@form, url: sessions_sign_in_path, as: :session) do |f|
   .row

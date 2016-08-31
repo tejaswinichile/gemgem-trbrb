@@ -41,7 +41,7 @@ class ThingsController < ApplicationController
     @thing    = @thing_op.model
 
     run Comment::Create, params: params.merge(thing_id: params[:id]) do |op| # overrides @model and @form!
-      flash[:notice] = "Created comment for \"#{op.thing.name}\""
+      flash[:notice] = t('comments.success_message', thing: op.thing.name)
       return redirect_to thing_path(op.thing)
     end
 

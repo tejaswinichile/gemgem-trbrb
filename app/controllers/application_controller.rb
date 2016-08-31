@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
   rescue_from Trailblazer::NotAuthorizedError, with: :user_not_authorized
 
   def user_not_authorized
-    flash[:message] = "Not authorized, my friend."
+    flash[:message] = t('errors.user_not_authorized')
     redirect_to root_path
   end
 end
